@@ -114,7 +114,7 @@ class Ticket(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     description = models.TextField()
-    satus = models.CharField(max_length=1, choices=STATUS_CHOICES)
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES)
     section = models.CharField(max_length=1, choices=SECTION_CHOICES)
     created_at = models.DateTimeField(auto_now_add=True)
 
