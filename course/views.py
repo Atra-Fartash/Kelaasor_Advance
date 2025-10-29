@@ -1,11 +1,24 @@
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
-from rest_framework.permissions import IsAdminUser, IsAuthenticated
-from django_filters.rest_framework import DjangoFilterBackend, OrderingFilter
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, CreateAPIView, DestroyAPIView
+from rest_framework.views import APIView
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from course.serializers import CategorySerializer, TeacherSerializer, CourseSerializer, CommentSerializer, ProfileSerializer, BasketItemSerializer, TransactionSerializer, TicketSerializer, TicketMessageSerializer
 from course.models import OTP, Basket, BasketItem, Wallet, Category, Teacher, Course, Comment, Profile, Transaction, Ticket, TicketMessage
 from rest_framework import permissions
+import random
+from django.core.cache import cache
+from rest_framework.response import Response
 
+
+
+def _update_basket_price(basket):
+    basket.total_price = 0
+    basket.save()
+    i = 0
+    for item in BasketItem.objects.filter(basket=basket):
+        basket.total_price = basket.total_price + item.product.price
+        i += 1
+    basket.save()
 
 
 class CategoryListCreate(ListCreateAPIView):
@@ -155,3 +168,76 @@ class TicketMessageRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
         if user.is_staff:
             return Ticket.objects.all()
         return Ticket.objects.filter(user=user)
+
+
+class AddProductToBasketItem(CreateAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+    serializer_class = BasketItemSerializer
+    queryset = BasketItem.objects.all()
+
+    def perform_create(self, serializer):
+        if not Basket.objects.filter(owner=self.request.user, is_paid=False).exists():
+            basket = Basket.objects.create(
+                owner=self.request.user,
+                total_price=0,
+                final_price=0,
+            )
+        else:
+            basket = Basket.objects.get(owner=self.request.user, is_paid=False)
+        serializer.save(owner=self.request.user, basket=basket)
+        _update_basket_price(basket)
+
+
+class BasketItemList(ListAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+    serializer_class = BasketItemSerializer
+    queryset = BasketItem.objects.all()
+
+    def get_queryset(self):
+        return BasketItem.objects.filter(owner=self.request.user)
+
+
+class DeleteBasketItem(DestroyAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+    serializer_class = BasketItemSerializer
+    queryset = BasketItem.objects.all()
+
+    def get_queryset(self):
+        return BasketItem.objects.filter(owner=self.request.user)
+    
+
+class GetOTP(APIView):
+
+    def post(self, request):
+        genrated_otp = random.randint(1000, 9999)
+        phone_number = request.data.get("phone_number")
+        # SEND OTP TO USER BY SMS
+        cache.set(phone_number, genrated_otp, timeout=180)
+
+        # otp_object = OTP.objects.create(
+        #     otp = genrated_otp,
+        #     phone_number = request.data.get('phone_number'),
+        # )
+        # SEND OTP TO USER BY SMS
+        # otp_object.expire_date = now() + timedelta(seconds=180)
+        # otp_object.save()
+        return Response("OTP sent!")
+    
+
+class TransactionView(CreateAPIView):
+    permission_classes = [permissions.IsAdminUser]
+    serializer_class = TransactionSerializer
+    queryset = Transaction.objects.all()
+
+    def perform_create(self, serializer):
+        user_wallet = Wallet.objects.get(user=self.request.user)
+        wallet_amount = user_wallet.amount
+        serializer.save(
+            user=self.request.user,
+            payment_code=random.randint(1000, 9999),
+            amount=(
+                serializer.validated_data["amount"]
+                if serializer.validated_data["amount"] < wallet_amount
+                else wallet_amount
+            ),
+        )
