@@ -170,7 +170,7 @@ class TicketMessageRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
         return Ticket.objects.filter(user=user)
 
 
-class AddProductToBasketItem(CreateAPIView):
+class AddBasketItem(CreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
     serializer_class = BasketItemSerializer
     queryset = BasketItem.objects.all()
