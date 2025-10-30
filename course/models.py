@@ -95,6 +95,7 @@ class Transaction(models.Model):
     amount = models.PositiveBigIntegerField()
     date = models.DateTimeField(auto_now_add=True)
     payment_code = models.CharField(max_length=20)
+    payment_type = models.CharField(max_length=2, choices=[("a", "IN"), ("b", "OUT")])
 
 
 class Ticket(models.Model):

@@ -235,6 +235,7 @@ class TransactionView(CreateAPIView):
         serializer.save(
             user=self.request.user,
             payment_code=random.randint(1000, 9999),
+            payment_type="b",
             amount=(
                 serializer.validated_data["amount"]
                 if serializer.validated_data["amount"] < wallet_amount
