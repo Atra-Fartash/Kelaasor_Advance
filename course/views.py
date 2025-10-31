@@ -2,8 +2,8 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from rest_framework.views import APIView
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
-from course.serializers import CategorySerializer, TeacherSerializer, CourseSerializer, CommentSerializer, ProfileSerializer, BasketItemSerializer, TransactionSerializer, TicketSerializer, TicketMessageSerializer
-from course.models import OTP, Basket, BasketItem, Wallet, Category, Teacher, Course, Comment, Profile, Transaction, Ticket, TicketMessage
+from course.serializers import CategorySerializer, TeacherSerializer, CourseSerializer, CommentSerializer, ProfileSerializer, BasketItemSerializer, TransactionSerializer, TicketSerializer, TicketMessageSerializer, GroupMemberSerializer
+from course.models import OTP, Basket, BasketItem, Wallet, Category, Teacher, Course, Comment, Profile, Transaction, Ticket, TicketMessage, GroupMembers
 from rest_framework import permissions
 import random
 from django.core.cache import cache
@@ -95,7 +95,19 @@ class CourseRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
         if self.request.method == ['PATCH', 'PUT', 'DELETE']:
            return [permissions.IsAdminUser()]
         return [permissions.AllowAny()]
-    
+
+
+class GroupMemberListCreate(ListCreateAPIView):
+    queryset =  GroupMembers.objects.all()
+    serializer_class = GroupMemberSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+
+class GroupMemberRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
+    queryset = GroupMembers.objects.all()
+    serializer_class = GroupMemberSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
 
 class CommentListCreate(ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
