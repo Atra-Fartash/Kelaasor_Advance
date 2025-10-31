@@ -26,8 +26,14 @@ class Course(models.Model):
         ('2', 'offline'),
     ]
 
+    PURCHASE_TYPE_CHOICES=[
+        ('s', 'single'),
+        ('g', 'group'),
+    ]
+
     title = models.CharField(max_length=100)
     course_type = models.CharField(max_length=1, choices=COURSE_TYPE_CHOICES)
+    purchase_type = models.CharField(max_length=1, choices=PURCHASE_TYPE_CHOICES, default='s')
     price = models.PositiveIntegerField()
     description = models.TextField()
     category = models.ForeignKey(to=Category, on_delete=models.CASCADE)
@@ -44,7 +50,19 @@ class Course(models.Model):
 
     def __str__(self):
         return self.title
-    
+
+
+class GroupMembers(models.Model):
+    course = models.ForeignKey(to=Course, on_delete=models.CASCADE)
+    buyer = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    email = models.EmailField(null=True, blank=True)
+    phone_number = models.CharField(max_length=11)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
 
 class Comment(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
