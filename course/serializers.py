@@ -1,4 +1,4 @@
-from course.models import Category, Teacher, Course, Comment, Profile, BasketItem, Transaction, Ticket, TicketMessage
+from course.models import Category, Teacher, Course, Comment, Profile, BasketItem, Transaction, Ticket, TicketMessage, GroupMembers
 from rest_framework.serializers import ModelSerializer
 
 
@@ -56,3 +56,9 @@ class TicketMessageSerializer(ModelSerializer):
     class Meta:
         model = TicketMessage
         fields = ['ticket', 'sender', 'message', 'created_at']
+
+
+class GroupMemberSerializer(ModelSerializer):
+    class Meta:
+        model = GroupMembers
+        fields = ['course', 'buyer', 'name', 'email', 'phone_number', 'created_at']
