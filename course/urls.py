@@ -2,7 +2,8 @@ from django.urls import path
 from course.views import (CategoryListCreate, CategoryRetrieveUpdateDestroy, TeacherListCreate, TeacherRetrieveUpdateDestroy,
                           CourseListCreate, CourseRetrieveUpdateDestroy, CommentListCreate, CommentRetrieveUpdateDestroy, ProfileListCreate,
                           ProfileRetrieveUpdateDestroy, TicketListCreate, TicketRetrieveUpdateDestroy, TicketMessageListCreate,
-                          TicketMessageRetrieveUpdateDestroy, AddBasketItem, BasketItemList, DeleteBasketItem, TransactionView) 
+                          TicketMessageRetrieveUpdateDestroy, AddBasketItem, BasketItemList, DeleteBasketItem, TransactionView,
+                          GroupMemberListCreate, GroupMemberRetrieveUpdateDestroy) 
 
 
 
@@ -13,6 +14,8 @@ urlpatterns = [
     path('teacher-retrieve-update-destroy/<str:pk>', TeacherRetrieveUpdateDestroy.as_view()),
     path('course-list-create', CourseListCreate.as_view()),
     path('course-retrieve-update-destroy/<str:pk>', CourseRetrieveUpdateDestroy.as_view()),
+    path('group-member-list-create', GroupMemberListCreate.as_view()),
+    path('group-member-retrieve-update-destroy/<str:pk>', GroupMemberRetrieveUpdateDestroy.as_view()),
     path('comment-list-create', CommentListCreate.as_view()),
     path('comment-retrieve-update-destroy/<str:pk>', CommentRetrieveUpdateDestroy.as_view()),
     path('profile-list-create', ProfileListCreate.as_view()),
