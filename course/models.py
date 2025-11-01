@@ -97,6 +97,15 @@ class BasketItem(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
+class Enrollment(models.Model):
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    course = models.ForeignKey(to=Course, on_delete=models.CASCADE)
+    date_joined = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'course')
+
+
 class OTP(models.Model):
     otp = models.IntegerField()
     phone_number = models.CharField(max_length=12)
