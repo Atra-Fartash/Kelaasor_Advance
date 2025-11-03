@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 
 class Category(models.Model):
@@ -104,6 +105,45 @@ class Enrollment(models.Model):
 
     class Meta:
         unique_together = ('user', 'course')
+
+
+class Discount(models.Model):
+    DISCOUNT_TYPE_CHOICES=[
+        ('p', 'percent'),
+        ('a', 'amount'),
+    ]
+    code = models.CharField(max_length=50)
+    discount_type = models.CharField(max_length=1, choices=DISCOUNT_TYPE_CHOICES)
+    value = models.PositiveIntegerField()
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE, null=True, blank=True)   # Leave empty to make the code public
+    is_single_use = models.BooleanField(default=False)                                      
+    usage_count = models.PositiveIntegerField(default=0)   
+    max_usage = models.PositiveIntegerField(default=1)
+    start_date = models.DateTimeField(auto_now_add=True)
+    end_date = models.DateTimeField()
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.code
+    
+    def is_valid_for_user(self, user):
+        now = timezone.now()
+        if not self.is_active:
+            return False, 'This code is not active'
+        
+        if self.start_date > now or self.start_date < now:
+            return False, 'This code is not active'
+        
+        if self.user and self.user!=user:
+            return False, 'This code is not active'
+        
+        if self.is_single_use and self.usage_count >= 1:
+            return False, 'This code has already been used'
+        
+        if not self.is_single_use and self.usage_count >= self.max_usage:
+            return False, 'The maximum usage limit for this code has been reached'
+        
+        return True, None
 
 
 class OTP(models.Model):
