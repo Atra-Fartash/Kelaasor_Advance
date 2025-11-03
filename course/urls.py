@@ -3,7 +3,7 @@ from course.views import (CategoryListCreate, CategoryRetrieveUpdateDestroy, Tea
                           CourseListCreate, CourseRetrieveUpdateDestroy, CommentListCreate, CommentRetrieveUpdateDestroy, ProfileListCreate,
                           ProfileRetrieveUpdateDestroy, TicketListCreate, TicketRetrieveUpdateDestroy, TicketMessageListCreate,
                           TicketMessageRetrieveUpdateDestroy, AddBasketItem, BasketItemList, DeleteBasketItem, TransactionView,
-                          GroupMemberListCreate, GroupMemberRetrieveUpdateDestroy) 
+                          GroupMemberListCreate, GroupMemberRetrieveUpdateDestroy, DiscountAPIView) 
 
 
 
@@ -28,4 +28,5 @@ urlpatterns = [
     path('basket-item-list', BasketItemList.as_view()),
     path('basket-item-delete/<str:pk>', DeleteBasketItem.as_view()),
     path('new-transaction', TransactionView.as_view()),
+    path('discount/', DiscountAPIView.as_view())
 ]
