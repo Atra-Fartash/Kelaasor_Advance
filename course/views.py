@@ -1,9 +1,9 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, CreateAPIView, DestroyAPIView
 from rest_framework.views import APIView
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import filters, serializers
+from rest_framework import filters, serializers, status
 from course.serializers import CategorySerializer, TeacherSerializer, CourseSerializer, CommentSerializer, ProfileSerializer, BasketItemSerializer, TransactionSerializer, TicketSerializer, TicketMessageSerializer, GroupMemberSerializer
-from course.models import OTP, Basket, BasketItem, Wallet, Category, Teacher, Course, Comment, Profile, Transaction, Ticket, TicketMessage, GroupMembers, Enrollment
+from course.models import OTP, Basket, BasketItem, Wallet, Category, Teacher, Course, Comment, Profile, Transaction, Ticket, TicketMessage, GroupMembers, Enrollment, Discount
 from rest_framework import permissions
 import random
 from django.core.cache import cache
@@ -278,3 +278,33 @@ class TransactionView(CreateAPIView):
                 else wallet_amount
             ),
         )
+
+
+class DiscountAPIView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request):
+        code_str = request.data.get('code')
+        if not code_str:
+            return Response({'detail': 'No discount code provided'}, status=400)
+        
+        try:
+            discount = Discount.objects.get(code = code_str)
+        except Discount.DoesNotExist:
+            return Response({'detail' : 'Invalid discount code'}, status=400)
+        
+        if discount.discount_type == 'percent':
+            discount_amount = Basket.total_price * (discount.value / 100)
+        else:
+            discount_amount = discount.value
+        
+        Basket.discount = discount
+        Basket.final_price = max(Basket.total_price - discount_amount, 0)
+        Basket.save()
+        discount.usage_count += 1
+        discount.save()
+        return Response({
+            'detail' : 'Discount code applied successfully',
+            'discount' : discount.code,
+            'final_price' : Basket.final_price
+        }, status=200)
