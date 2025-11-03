@@ -85,7 +85,7 @@ class Profile(models.Model):
 class Basket(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     total_price = models.PositiveBigIntegerField()
-    discount = models.PositiveBigIntegerField(default=0)
+    discount = models.ForeignKey(to='Discount', on_delete=models.SET_NULL, null=True, blank=True)
     final_price = models.PositiveBigIntegerField()
     is_paid = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
