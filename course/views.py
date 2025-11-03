@@ -1,9 +1,9 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, CreateAPIView, DestroyAPIView
 from rest_framework.views import APIView
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import filters
+from rest_framework import filters, serializers
 from course.serializers import CategorySerializer, TeacherSerializer, CourseSerializer, CommentSerializer, ProfileSerializer, BasketItemSerializer, TransactionSerializer, TicketSerializer, TicketMessageSerializer, GroupMemberSerializer
-from course.models import OTP, Basket, BasketItem, Wallet, Category, Teacher, Course, Comment, Profile, Transaction, Ticket, TicketMessage, GroupMembers
+from course.models import OTP, Basket, BasketItem, Wallet, Category, Teacher, Course, Comment, Profile, Transaction, Ticket, TicketMessage, GroupMembers, Enrollment
 from rest_framework import permissions
 import random
 from django.core.cache import cache
@@ -188,14 +188,24 @@ class AddBasketItem(CreateAPIView):
     queryset = BasketItem.objects.all()
 
     def perform_create(self, serializer):
-        if not Basket.objects.filter(owner=self.request.user, is_paid=False).exists():
+        user = self.request.user
+        course = serializer.validated_data['course']
+        
+        if Enrollment.objects.filter(user=user, course=course).exists():
+            raise serializers.ValidationError('You have already bought this course.')
+        
+        basket = Basket.objects.filter(owner=user, is_paid=False)
+        if not basket.exists():
             basket = Basket.objects.create(
                 owner=self.request.user,
                 total_price=0,
                 final_price=0,
             )
         else:
-            basket = Basket.objects.get(owner=self.request.user, is_paid=False)
+            basket = basket.get()
+            if basket.items.filter(course=course):
+                raise serializers.ValidationError('This course is already in your basket.')
+        
         serializer.save(owner=self.request.user, basket=basket)
         _update_basket_price(basket)
 
