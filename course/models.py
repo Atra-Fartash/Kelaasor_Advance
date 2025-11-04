@@ -49,12 +49,18 @@ class Course(models.Model):
     access_expiration = models.DateField(null=True, blank=True)
     offline_video = models.FileField(null=True,blank=True)
 
+    def get_group_price(self, count):
+        for tier in self.tier_prices.all():
+            if tier.min_members <= count and (not tier.max_members or count <= tier.max_members):
+                return tier.price_per_person
+        return self.price
+
     def __str__(self):
         return self.title
 
 
 class CoursTierPrice(models.Model):
-    course = models.ForeignKey(to=Course, on_delete=models.CASCADE)
+    course = models.ForeignKey(to=Course, on_delete=models.CASCADE, related_name='tier_prices')
     min_members = models.PositiveIntegerField(default=1)
     max_members = models.PositiveIntegerField(null=True, blank=True)
     price_per_person =  models.PositiveIntegerField()
