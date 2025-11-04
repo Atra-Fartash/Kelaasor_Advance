@@ -53,6 +53,13 @@ class Course(models.Model):
         return self.title
 
 
+class CoursTierPrice(models.Model):
+    course = models.ForeignKey(to=Course, on_delete=models.CASCADE)
+    min_members = models.PositiveIntegerField(default=1)
+    max_members = models.PositiveIntegerField(null=True, blank=True)
+    price_per_person =  models.PositiveIntegerField()
+
+
 class GroupMembers(models.Model):
     course = models.ForeignKey(to=Course, on_delete=models.CASCADE)
     buyer = models.ForeignKey(to=User, on_delete=models.CASCADE)
