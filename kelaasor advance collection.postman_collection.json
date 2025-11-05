@@ -1,0 +1,1747 @@
+{
+	"info": {
+		"_postman_id": "3db59ebf-ed78-49a3-a8d0-d18c5c167b80",
+		"name": "kelaasor advance collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48581098",
+		"_collection_link": "https://atrafartash-5510185.postman.co/workspace/Atra's-Workspace~15850d6d-2f04-4ba7-8835-663b357ecde8/collection/48581098-3db59ebf-ed78-49a3-a8d0-d18c5c167b80?action=share&source=collection_link&creator=48581098"
+	},
+	"item": [
+		{
+			"name": "category-list-create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzcyNjI1LCJpYXQiOjE3NjIzNzIzMjUsImp0aSI6ImEzMjJhZmZiNTE0ZTQ1YWQ5ZDNmOTlmNDA4ZDg4NTg3IiwidXNlcl9pZCI6IjEifQ.BuNnlzlWOiUHOIlEFMuigO231rv5A1jgfYrBgUXrXI0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"برنامه نویسی\",\r\n    \"description\": \"دوره برنامه نویسی\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/category-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"category-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category-list-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzcyNzI1LCJpYXQiOjE3NjIzNzI0MjUsImp0aSI6ImMzNDVlODgxYmU5OTQ0MjU4ZjcyZWE1NDlmZmRiYzRjIiwidXNlcl9pZCI6IjEifQ.QO7YmdrPlntY1LoKz4RzMgAXLXb7KDRiW-VDZCw0Tk0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"برنامه نویسی\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/category-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"category-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczMDg5LCJpYXQiOjE3NjIzNzI3ODksImp0aSI6IjVjODY0NjBhNDhjOTRlMTQ4NTc3YzljY2FlNWI2OWQzIiwidXNlcl9pZCI6IjEifQ.LAyn_0epM34vCYI_DfpN3KDEKnKSFk_rN9iIBTEaF1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/category-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"category-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczMDg5LCJpYXQiOjE3NjIzNzI3ODksImp0aSI6IjVjODY0NjBhNDhjOTRlMTQ4NTc3YzljY2FlNWI2OWQzIiwidXNlcl9pZCI6IjEifQ.LAyn_0epM34vCYI_DfpN3KDEKnKSFk_rN9iIBTEaF1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/category-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"category-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczMDg5LCJpYXQiOjE3NjIzNzI3ODksImp0aSI6IjVjODY0NjBhNDhjOTRlMTQ4NTc3YzljY2FlNWI2OWQzIiwidXNlcl9pZCI6IjEifQ.LAyn_0epM34vCYI_DfpN3KDEKnKSFk_rN9iIBTEaF1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/category-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"category-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "teacher-list-create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczNTk0LCJpYXQiOjE3NjIzNzMyOTQsImp0aSI6ImFlN2U0MDAxZjExNTQyY2U5NmM1MmZjNTZiYjBiMTQyIiwidXNlcl9pZCI6IjEifQ.mGrrXwrg5e0lf8WGns0W2SUIX_M3w-312Eadunyk5Gk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/teacher-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"teacher-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "teacher-list-create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczNTk0LCJpYXQiOjE3NjIzNzMyOTQsImp0aSI6ImFlN2U0MDAxZjExNTQyY2U5NmM1MmZjNTZiYjBiMTQyIiwidXNlcl9pZCI6IjEifQ.mGrrXwrg5e0lf8WGns0W2SUIX_M3w-312Eadunyk5Gk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/teacher-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"teacher-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "teacher-retrieve-update-destroy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczNTk0LCJpYXQiOjE3NjIzNzMyOTQsImp0aSI6ImFlN2U0MDAxZjExNTQyY2U5NmM1MmZjNTZiYjBiMTQyIiwidXNlcl9pZCI6IjEifQ.mGrrXwrg5e0lf8WGns0W2SUIX_M3w-312Eadunyk5Gk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/teacher-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"teacher-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "teacher-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczNTk0LCJpYXQiOjE3NjIzNzMyOTQsImp0aSI6ImFlN2U0MDAxZjExNTQyY2U5NmM1MmZjNTZiYjBiMTQyIiwidXNlcl9pZCI6IjEifQ.mGrrXwrg5e0lf8WGns0W2SUIX_M3w-312Eadunyk5Gk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/teacher-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"teacher-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "teacher-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczNTk0LCJpYXQiOjE3NjIzNzMyOTQsImp0aSI6ImFlN2U0MDAxZjExNTQyY2U5NmM1MmZjNTZiYjBiMTQyIiwidXNlcl9pZCI6IjEifQ.mGrrXwrg5e0lf8WGns0W2SUIX_M3w-312Eadunyk5Gk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/teacher-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"teacher-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "course-list-create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczNTk0LCJpYXQiOjE3NjIzNzMyOTQsImp0aSI6ImFlN2U0MDAxZjExNTQyY2U5NmM1MmZjNTZiYjBiMTQyIiwidXNlcl9pZCI6IjEifQ.mGrrXwrg5e0lf8WGns0W2SUIX_M3w-312Eadunyk5Gk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/course-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"course-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "course-list-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/course-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"course-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "course-retrieve-update-destroy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczNTk0LCJpYXQiOjE3NjIzNzMyOTQsImp0aSI6ImFlN2U0MDAxZjExNTQyY2U5NmM1MmZjNTZiYjBiMTQyIiwidXNlcl9pZCI6IjEifQ.mGrrXwrg5e0lf8WGns0W2SUIX_M3w-312Eadunyk5Gk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/course-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"course-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "course-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzc0MTI2LCJpYXQiOjE3NjIzNzM4MjYsImp0aSI6ImQ4ZDhkNTFhNTkxMTRmMGNhMzY2ZDJlZWEwZWQ2OGYyIiwidXNlcl9pZCI6IjEifQ.z6ebyoWTeuZoCuZqRAG10mZLYRYUsZ0aIhimXeoRvJk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/course-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"course-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "course-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzc0MTI2LCJpYXQiOjE3NjIzNzM4MjYsImp0aSI6ImQ4ZDhkNTFhNTkxMTRmMGNhMzY2ZDJlZWEwZWQ2OGYyIiwidXNlcl9pZCI6IjEifQ.z6ebyoWTeuZoCuZqRAG10mZLYRYUsZ0aIhimXeoRvJk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/course-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"course-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "group-member-list-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/group-member-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"group-member-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "group-member-list-create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/group-member-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"group-member-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "group-member-retrieve-update-destroy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/group-member-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"group-member-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "group-member-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/group-member-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"group-member-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "group-member-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/group-member-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"group-member-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment-list-create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/comment-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"comment-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment-list-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/comment-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"comment-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment-retrieve-update-destroy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/comment-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"comment-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/comment-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"comment-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/comment-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"comment-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile-list-create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/profile-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"profile-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile-list-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/profile-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"profile-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile-retrieve-update-destroy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/profile-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"profile-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzc0MTI2LCJpYXQiOjE3NjIzNzM4MjYsImp0aSI6ImQ4ZDhkNTFhNTkxMTRmMGNhMzY2ZDJlZWEwZWQ2OGYyIiwidXNlcl9pZCI6IjEifQ.z6ebyoWTeuZoCuZqRAG10mZLYRYUsZ0aIhimXeoRvJk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/profile-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"profile-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzc0MTI2LCJpYXQiOjE3NjIzNzM4MjYsImp0aSI6ImQ4ZDhkNTFhNTkxMTRmMGNhMzY2ZDJlZWEwZWQ2OGYyIiwidXNlcl9pZCI6IjEifQ.z6ebyoWTeuZoCuZqRAG10mZLYRYUsZ0aIhimXeoRvJk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/profile-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"profile-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Ticket-list-create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/Ticket-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"Ticket-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ticket-list-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/Ticket-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"Ticket-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ticket-retrieve-update-destroy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/ticket-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"ticket-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ticket-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/ticket-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"ticket-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ticket-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzc0MTI2LCJpYXQiOjE3NjIzNzM4MjYsImp0aSI6ImQ4ZDhkNTFhNTkxMTRmMGNhMzY2ZDJlZWEwZWQ2OGYyIiwidXNlcl9pZCI6IjEifQ.z6ebyoWTeuZoCuZqRAG10mZLYRYUsZ0aIhimXeoRvJk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/ticket-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"ticket-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ticket-message-list-create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/ticket-message-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"ticket-message-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ticket-message-list-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/ticket-message-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"ticket-message-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ticket-message-retrieve-update-destroy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/ticket-message-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"ticket-message-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ticket-message-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/ticket-message-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"ticket-message-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ticket-message-retrieve-update-destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/ticket-message-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"ticket-message-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-to-basket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/add-to-basket",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"add-to-basket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "basket-item-list",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "basket-item-delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/basket-item-delete/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"basket-item-delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new-transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/new-transaction",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"new-transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "discount",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzczOTQ5LCJpYXQiOjE3NjIzNzM2NDksImp0aSI6ImI4OGIxZWNiNzI2MDQyNzk4OGIyZTk0ZGFmMjFkOTk4IiwidXNlcl9pZCI6IjEifQ.8ZybDOTEb7BEV76kmRmOrgAJ-Xl-cAGLQtDMeVYh6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/course/discount/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"discount",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
