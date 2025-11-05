@@ -165,8 +165,12 @@ class TicketRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
 
 class TicketMessageListCreate(ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
-    queryset = TicketMessage.objects.all()
     serializer_class = TicketMessageSerializer
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_staff:
+           return TicketMessage.objects.all()
+        return TicketMessage.objects.filter(sender=user)
 
 
 class TicketMessageRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
